@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="dob" class="java.util.Date">
+	   <property name="year" value="100"/>
+	   <property name="month" value="11"/>
+	   <property name="date" value="10"/>
+	</bean>
+	<bean id="doj" class="java.util.Date">
+	   <property name="year" value="114"/>
+	   <property name="month" value="11"/>
+	   <property name="date" value="10"/>
+	</bean>
+	<bean id="dom" class="java.util.Date">
+	   <property name="year" value="117"/>
+	   <property name="month" value="03"/>
+	   <property name="date" value="10"/>
+	</bean>
+	
+	
+	
+	<bean id="ravi" class="com.nt.beans.Customer">
+	<constructor-arg value="ravi"/>
+	<constructor-arg value="859647"/>
+	<constructor-arg ref="dob"/>
+	<constructor-arg ref="doj"/>
+	<constructor-arg ref="dom"/>
+	</bean>
+	
+	<bean id="teja" class="com.nt.beans.Customer">
+	<constructor-arg value="ravi"/>
+	<constructor-arg value="859647"/>
+	<constructor-arg><null/></constructor-arg>
+	<constructor-arg ref="doj"/>
+	<constructor-arg><null/></constructor-arg>
+	</bean>
+	
+
+
+</beans>

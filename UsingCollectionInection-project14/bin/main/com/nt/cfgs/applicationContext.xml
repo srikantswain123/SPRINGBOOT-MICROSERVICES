@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="date" class="java.util.Date">
+<property name="year" value="90"/>
+<property name="month" value="11"/>
+<property name="date" value="12"/>
+
+</bean>
+<bean id="sysDate" class="java.util.Date"/>
+
+
+<bean id="univer" class="com.nt.beans.University">
+<constructor-arg>
+<set>
+<value>9999999</value>
+<value>8888888</value>
+<value>7777777</value>
+<value>9999999</value>
+</set>
+</constructor-arg>
+<constructor-arg>
+<set>
+<ref bean="date"/>
+
+</set>
+
+</constructor-arg>
+</bean>
+<bean id="emp" class="com.nt.beans.Employee">
+<property name="empnoname">
+<map>
+<entry>
+<key><value>9999999</value></key>
+<value>ranjit</value>
+</entry>
+</map>
+</property>
+<property name="joindate">
+<map>
+<entry>
+<key><ref bean="sysDate"/></key>
+<ref bean="date"/>
+</entry>
+</map>
+
+</property>
+</bean>
+<bean id="emp1" class="com.nt.beans.Employee">
+<property name="empnoname">
+<map>
+<entry key="8888888" value="rajib"/>
+<entry key="777777" value="manoj"/>
+<entry key="777777" value="gurmit"/>
+
+</map>
+
+</property>
+<property name="joindate">
+<map>
+<entry key-ref="sysDate" value-ref="date"/>
+</map>
+</property>
+
+</bean>
+<bean id="db" class="com.nt.beans.DBdetails">
+<constructor-arg>
+<props><prop key="classname">oracle.jdbc.driver.OracleDriver</prop></props>
+</constructor-arg>
+<constructor-arg>
+<props><prop key="username">system</prop></props>
+</constructor-arg>
+<constructor-arg>
+<props><prop key="password">Srikant1234</prop></props>
+</constructor-arg>
+
+</bean>
+
+</beans>

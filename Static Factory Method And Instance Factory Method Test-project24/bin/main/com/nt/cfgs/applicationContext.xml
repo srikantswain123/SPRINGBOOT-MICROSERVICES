@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="c1" class="java.lang.Class" factory-method="forName">
+<constructor-arg value="java.util.Date"/>
+</bean>
+
+<bean id="date" class="java.util.Calendar" factory-method="getInstance"/>
+
+
+<!-- Instance Factory method Test -->
+<bean id="st" class="java.lang.String">
+    <constructor-arg value="hello"/>
+</bean>
+<bean id="st1" factory-bean="st" factory-method="concat">
+<constructor-arg value="123"/>
+</bean>
+
+<bean id="sb1" class="java.lang.StringBuffer">
+<constructor-arg value="StringBuffer"/>
+</bean>
+<bean id="sb2" factory-bean="sb1"  factory-method="substring">
+<constructor-arg value="0"/>
+<constructor-arg value="5"/>
+</bean>
+</beans>

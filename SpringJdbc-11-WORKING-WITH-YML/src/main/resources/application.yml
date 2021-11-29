@@ -1,0 +1,28 @@
+per:
+  info:
+    pid: 101
+    pname: srikant
+    paddrs: mumbai
+    marks: 
+      - 50
+      - 60
+      - 70
+    result:
+      - 60
+      - 70
+      - 80
+    phones: 
+      - 654988
+      - 989489
+      - 48489 
+    banks: 
+       SBI: 984984
+       UNION: 48948
+       ICIC: 489487
+    job:
+       company: HCL
+       sal:  494844
+       deptno: 10
+       
+      
+      
