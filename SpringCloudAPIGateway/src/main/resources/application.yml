@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: cart-service
+          uri: lb://CART-SERVICE
+          predicates:
+           - Path=/con/**
+server: 
+ port: 9874
+     
+        

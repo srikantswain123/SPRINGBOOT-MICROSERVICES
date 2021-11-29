@@ -1,0 +1,10 @@
+server: 
+  port: 8956
+  
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: srikantdoc
+        
